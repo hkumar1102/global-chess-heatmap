@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --page-bg: rgb(2 6 23);
+  --page-text: rgb(226 232 240);
+  --piece-white-fill: rgb(240 249 255);
+  --piece-black-fill: rgb(15 23 42);
+  --piece-white-stroke: rgba(2, 6, 23, 0.95);
+  --piece-black-stroke: rgba(186, 230, 253, 0.8);
+  --scroll-thumb: rgba(148, 163, 184, 0.28);
+  --scroll-thumb-hover: rgba(148, 163, 184, 0.4);
+  --scroll-track-border: rgba(2, 6, 23, 0.72);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --page-bg: rgb(239 246 255);
+  --page-text: rgb(15 23 42);
+  --piece-white-fill: rgb(255 255 255);
+  --piece-black-fill: rgb(2 6 23);
+  --piece-white-stroke: rgba(2, 6, 23, 0.92);
+  --piece-black-stroke: rgba(148, 163, 184, 0.9);
+  --scroll-thumb: rgba(71, 85, 105, 0.26);
+  --scroll-thumb-hover: rgba(51, 65, 85, 0.4);
+  --scroll-track-border: rgba(235, 244, 255, 0.72);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--page-text);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.38) rgba(2, 6, 23, 0);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(2, 6, 23, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 999px;
+  border: 3px solid var(--scroll-track-border);
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scroll-thumb-hover);
+}
+
+:root[data-theme='light'] .shadow-glow {
+  box-shadow: 0 0 0 1px rgba(71, 85, 105, 0.22), 0 14px 24px rgba(15, 23, 42, 0.12);
+}
+
+:root[data-theme='light'] .bg-slate-950 {
+  background-color: rgb(235 244 255) !important;
+}
+
+:root[data-theme='light'] .bg-slate-950\/85 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+:root[data-theme='light'] .bg-slate-950\/70 {
+  background-color: rgba(255, 255, 255, 0.76) !important;
+}
+
+:root[data-theme='light'] .bg-slate-950\/60 {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+:root[data-theme='light'] .bg-slate-950\/40 {
+  background-color: rgba(255, 255, 255, 0.55) !important;
+}
+
+:root[data-theme='light'] .bg-slate-950\/30 {
+  background-color: rgba(255, 255, 255, 0.66) !important;
+}
+
+:root[data-theme='light'] .bg-slate-950\/20 {
+  background-color: rgba(255, 255, 255, 0.74) !important;
+}
+
+:root[data-theme='light'] .bg-slate-950\/10 {
+  background-color: rgba(255, 255, 255, 0.82) !important;
+}
+
+:root[data-theme='light'] .bg-slate-900\/90 {
+  background-color: rgba(248, 251, 255, 0.95) !important;
+}
+
+:root[data-theme='light'] .bg-slate-900\/70 {
+  background-color: rgba(241, 245, 249, 0.82) !important;
+}
+
+:root[data-theme='light'] .bg-slate-900\/60 {
+  background-color: rgba(241, 245, 249, 0.75) !important;
+}
+
+:root[data-theme='light'] .bg-slate-900\/40 {
+  background-color: rgba(241, 245, 249, 0.62) !important;
+}
+
+:root[data-theme='light'] .bg-slate-900\/20 {
+  background-color: rgba(241, 245, 249, 0.5) !important;
+}
+
+:root[data-theme='light'] .bg-slate-800 {
+  background-color: rgba(226, 232, 240, 0.95) !important;
+}
+
+:root[data-theme='light'] .bg-slate-800\/70 {
+  background-color: rgba(226, 232, 240, 0.78) !important;
+}
+
+:root[data-theme='light'] .border-slate-800 {
+  border-color: rgba(100, 116, 139, 0.34) !important;
+}
+
+:root[data-theme='light'] .border-slate-800\/70 {
+  border-color: rgba(100, 116, 139, 0.26) !important;
+}
+
+:root[data-theme='light'] .border-slate-700 {
+  border-color: rgba(100, 116, 139, 0.4) !important;
+}
+
+:root[data-theme='light'] .ring-slate-800 {
+  --tw-ring-color: rgba(100, 116, 139, 0.35) !important;
+}
+
+:root[data-theme='light'] .ring-slate-800\/70 {
+  --tw-ring-color: rgba(100, 116, 139, 0.24) !important;
+}
+
+:root[data-theme='light'] .ring-slate-700\/60 {
+  --tw-ring-color: rgba(100, 116, 139, 0.28) !important;
+}
+
+:root[data-theme='light'] .ring-slate-700\/50 {
+  --tw-ring-color: rgba(100, 116, 139, 0.24) !important;
+}
+
+:root[data-theme='light'] .text-slate-50,
+:root[data-theme='light'] .text-slate-100,
+:root[data-theme='light'] .text-slate-200 {
+  color: rgb(15 23 42) !important;
+}
+
+:root[data-theme='light'] .text-slate-300 {
+  color: rgb(30 41 59) !important;
+}
+
+:root[data-theme='light'] .text-slate-400 {
+  color: rgb(51 65 85) !important;
+}
+
+:root[data-theme='light'] .text-slate-500,
+:root[data-theme='light'] .text-slate-600 {
+  color: rgb(71 85 105) !important;
+}
+
+:root[data-theme='light'] .text-cyan-100 {
+  color: rgb(14 116 144) !important;
+}
+
+:root[data-theme='light'] .text-emerald-100 {
+  color: rgb(6 95 70) !important;
+}
+
+:root[data-theme='light'] .text-rose-100 {
+  color: rgb(159 18 57) !important;
+}
+
+:root[data-theme='light'] .text-amber-100 {
+  color: rgb(146 64 14) !important;
+}
+
+.piece-fill-white {
+  color: var(--piece-white-fill) !important;
+}
+
+.piece-fill-black {
+  color: var(--piece-black-fill) !important;
+}
+
+.piece-stroke-white {
+  color: var(--piece-white-stroke) !important;
+}
+
+.piece-stroke-black {
+  color: var(--piece-black-stroke) !important;
+}
